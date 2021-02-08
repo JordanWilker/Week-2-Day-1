@@ -7,7 +7,60 @@
     // output: 7
 
 function daysPosition(day, offset) {
-
+    if (offset == true){
+        switch(day){
+            case "monday":
+                return 1
+                break
+            case "tuesday":
+                return 2
+                break
+            case "wednesday":
+                return 3
+                break
+            case "Thursday":
+                return 4
+                break
+            case "Friday":
+                return 5
+                break
+            case "Saturday":
+                return 6
+                break
+            case "sunday":
+                return 7
+                break
+            default:
+                return "That's not a day of the week"
+        }
+    } else {
+        switch(day){
+            case "monday":
+                return 2
+                break
+            case "Tuesday":
+                return 3
+                break
+            case "Wednesday":
+                return 4
+                break
+            case "Thursday":
+                return 5
+                break
+            case "Friday":
+                return 6
+                break
+            case "Saturday":
+                return 7
+                break
+            case "sunday":
+                return 1
+                break
+            default:
+                return "That's not a day of the week"
+    }
+    
+}
 }
 
 
@@ -27,7 +80,21 @@ function daysPosition(day, offset) {
  */
 
  function golfScore(score, par) {
-
+    switch (score-=par){
+        case 2: return "Double Bogie"
+            break
+        case 1: return "Bogie"
+            break
+        case 0: return "Par"
+            break
+        case -1: return "Birdie"
+            break
+        case -2: return "Eagle"
+            break
+        case -3: return "Ace"
+            break
+        default: return "Ouch"
+    }
  }
  
 
@@ -52,5 +119,63 @@ function daysPosition(day, offset) {
 let count = 0
 
 function cardCounter(card) {
+    let count=0
+    switch(card){
+        case 2:
+            console.log('first');
+            count +=1
+            break
+        case 3:
+            console.log('first')
+            break
+        case 4:
+            console.log('first')
+            count+=1
+            break
+        case 5:
+            console.log('first');
+            count+=1
+            break
+        case 6:
+            console.log('first')
+            count+=1
+            break
+        case 7:
+            console.log('second')
+            count = count
+            break
+        case 8:
+            console.log('second')
+            count = count
+            break
+        case 9:
+            console.log('second')
+            count = count
+            break
+        case 10:
+            console.log('last')
+            count -=1 
+            break
+        case "J":
+            console.log('last')
+            count -=1 
+            break
+        case "Q":
+            console.log('last')
+            count -=1 
+            break
+        case "K":
+            console.log('last')
+            count -=1 
+            break
+        case "A":
+            console.log('last')
+            count -=1 
+            break
 
+        }
+    if (count<=0){
+        return "Hold"
+    } else{ return "Bet"}
+    return count
 }

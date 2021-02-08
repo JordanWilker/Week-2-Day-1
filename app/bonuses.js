@@ -3,4 +3,5 @@ let str = "team number 2"
 
 function camelCase(str) {
 
+    
 }
